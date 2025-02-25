@@ -14,18 +14,20 @@
             background-color: #f4f4f4;
             font-family: Arial, sans-serif;
             overflow: hidden;
+            padding: 10px;
         }
 
         .card-container {
             position: relative;
-            width: 500px;
-            height: 500px;
+            width: 90%;
+            max-width: 350px;
+            height: auto;
             perspective: 1000px;
         }
 
         .card {
             width: 100%;
-            height: 100%;
+            height: auto;
             position: absolute;
             transform-style: preserve-3d;
             transition: transform 1s;
@@ -39,38 +41,40 @@
         .card-back {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: auto;
             backface-visibility: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .card-front {
             background-color: #ff5e5e;
             color: white;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             cursor: pointer;
+            text-align: center;
         }
 
         .card-back {
             background-color: white;
             color: black;
-            font-size: 16px;
+            font-size: 14px;
             text-align: center;
-            padding: 20px;
             transform: rotateY(180deg);
             display: flex;
             flex-direction: column;
-            position: relative;
         }
 
         .card-back img {
-            width: 200px;
-            height: 200px;
+            width: 80%;
+            max-width: 200px;
+            height: auto;
             border-radius: 10px;
             margin-top: 10px;
         }
@@ -91,7 +95,7 @@
             position: absolute;
             bottom: -10px;
             color: red;
-            font-size: 24px;
+            font-size: 20px;
             animation: floating-hearts 5s linear infinite;
         }
     </style>
